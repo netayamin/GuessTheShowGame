@@ -11,9 +11,8 @@ const difficultyLevel = 4;
 
 function Boxes(props: BoxProps) {
 	const [gameWord, setGameWord] = useState(props.show.name);
-	const [filtredLetters, setFiltredLetters] = useState(
-		filterLetters(gameWord, difficultyLevel)
-	);
+
+	const filtredLetters = filterLetters(gameWord, difficultyLevel);
 
 	useEffect(() => {
 		setGameWord(props.show.name);
