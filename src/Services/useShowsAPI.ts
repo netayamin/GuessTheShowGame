@@ -18,7 +18,9 @@ const useShowsAPI = () => {
 					language: "en-US",
 				},
 			})
-			.then((val) => setShows(val.data.results));
+			.then((val) => {
+				setShows(val.data.results);
+			});
 	}, [currentPage]);
 
 	useEffect(() => {

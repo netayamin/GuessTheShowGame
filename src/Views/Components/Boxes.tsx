@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import { filterLetters, findBoxSize, getRandomInt } from "../../helper";
+import { filterLetters, findBoxSize } from "../../helper";
 import { TVShowResult } from "../../Interfaces/TVShowResult";
 
 interface BoxProps {
@@ -10,17 +10,11 @@ interface BoxProps {
 const difficultyLevel = 4;
 
 function Boxes(props: BoxProps) {
-	const [gameWord, setGameWord] = useState(props.show.name);
-
-	const filtredLetters = filterLetters(gameWord, difficultyLevel);
-
-	useEffect(() => {
-		setGameWord(props.show.name);
-	}, [props.show]);
+	const filtredLetters = filterLetters(props.show.name, difficultyLevel);
 
 	return (
 		<BoxesContainer>
-			{gameWord.split(" ").map((arr: string, index: React.Key) => (
+			{props.show.name.split(" ").map((arr: string, index: React.Key) => (
 				<SentenceWrapper key={index}>
 					{arr.split("").map((letter, index) => {
 						return (
