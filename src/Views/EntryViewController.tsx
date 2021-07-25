@@ -100,6 +100,7 @@ export default function EntryViewController() {
 			...prevState,
 			isStartGame: true,
 			score: 3,
+			isGameOver: false,
 			currentShow: pickRandomShow(shows),
 		}));
 	};
