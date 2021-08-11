@@ -12,7 +12,6 @@ export default function EntryView() {
 	return gameState.shows ? (
 		<Container>
 			<TopBar {...topBarProps} />
-			<Title {...gameState} />
 			{gameState.isStartGame && <Game {...gameViewProps} />}
 		</Container>
 	) : (
