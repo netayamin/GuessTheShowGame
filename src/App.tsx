@@ -6,7 +6,6 @@ export default function App() {
 	return (
 		<div id='App'>
 			<Main>
-				<EntryView />
 			</Main>
 		</div>
 	);
