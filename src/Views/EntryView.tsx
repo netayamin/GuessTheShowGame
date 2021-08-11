@@ -14,7 +14,7 @@ export default function EntryView() {
 			<TopBar {...topBarProps} />
 			<Title {...gameState} />
 			{gameState.isStartGame && <Game {...gameViewProps} />}
-			<Button {...startBtnProps}>Start new game</Button>
+			<Button {...startBtnProps}>Start game</Button>
 		</Container>
 	) : (
 		<Spinner size={40} />
